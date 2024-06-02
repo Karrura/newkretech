@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700");
+@import url("https://api.fontshare.com/css?f[]=quicksand@400,500,700&display=swap");
+
+p,
+ol,
+ul {
+  margin: 0px;
+}
+
+button {
+  padding: 0px;
+}
+
+ol,
+ul {
+  padding-inline-start: 1.5em;
+}
+
+input {
+  background-image: none;
+  background-color: transparent;
+}
+
+.diabetes-login-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.diabetes-login-diabetes-login-0 {
+  flex-shrink: 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding-left: 124px;
+  background-color: rgba(255, 255, 255, 1);
+  overflow: clip;
+}
+
+.diabetes-login-tttt-selamat-datang-tsilahkan-login-untuk-mendeteksi-diabetes-tusername-rectangle-4tpassword-rectangle-5ttrectangle-6ingat-saya-tbutton-ttpengguna-baru-buat-akun-ttttgroup-6kretech-2024rectangle-7 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+  column-gap: 124px;
+  row-gap: 124px;
+  align-items: flex-end;
+  font-family: Quicksand;
+  letter-spacing: 0em;
+}
+
+old-style-text{
+  font-family: Quicksand;
+  letter-spacing: 0em;
+}
+
+.diabetes-login-ttt-selamat-datang-tsilahkan-login-untuk-mendeteksi-diabetes-tusername-rectangle-4tpassword-rectangle-5ttrectangle-6ingat-saya-tbutton-ttpengguna-baru-buat-akun-ttttgroup-6kretech-2024 {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 23px;
+  height: 880px;
+  width: 497px;
+  flex-direction: column;
+}
+
+.diabetes-login-tt-selamat-datang-tsilahkan-login-untuk-mendeteksi-diabetes-tusername-rectangle-4tpassword-rectangle-5ttrectangle-6ingat-saya-tbutton-ttpengguna-baru-buat-akun-ttttgroup-6kretech-2024 {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 8px;
+  line-height: normal;
+}
+
+.diabetes-login-t-selamat-datang-tsilahkan-login-untuk-mendeteksi-diabetes {
+  padding-right: 60px;
+  color: rgba(74, 70, 70, 1);
+  font-weight: 700;
+}
+
+.diabetes-login-selamat-datang {
+  text-align: center;
+  font-size: 55px;
+}
+
+.diabetes-login-text-0 {
+  color: rgba(32, 151, 145, 1);
+}
+
+.diabetes-login-silahkan-login-untuk-mendeteksi-diabetes {
+  height: 20px;
+  align-items: flex-end;
+  display: flex;
+  font-size: 20px;
+}
+
+.diabetes-login-username {
+  padding-top: 101px;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(74, 70, 70, 1);
+}
+
+.diabetes-login-rectangle-4 {
+  flex-shrink: 0;
+  filter: drop-shadow(5px 7px 1px rgba(0, 0, 0, 0.1));
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  height: 85px;
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-width: 1px;
+  border-color: rgba(74, 70, 70, 1);
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  width: 497px;
+}
+
+.diabetes-login-rectangle-4input {
+  outline: none;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.diabetes-login-password {
+  padding-top: 7px;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(74, 70, 70, 1);
+}
+
+.diabetes-login-rectangle-5 {
+  display: flex;
+  filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.1));
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  justify-content: flex-end;
+  padding-top: 18px;
+  padding-right: 23px;
+  padding-left: 23px;
+  padding-bottom: 18px;
+  background-color: rgba(255, 255, 255, 1);
+  align-items: center;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-width: 1px;
+  border-color: rgba(74, 70, 70, 1);
+  border-style: solid;
+  width: 497px;
+}
+
+.diabetes-login-vision {
+  height: 44px;
+  width: 44px;
+  margin-top: 3px;
+  opacity: 0.6;
+  object-position: center;
+  object-fit: cover;
+}
+
+.diabetes-login-rectangle-5input {
+  outline: none;
+  flex-grow: 1;
+  min-width: 0;
+  padding-left: 1ch;
+}
+
+.diabetes-login-tt-rectangle-6ingat-saya {
+  display: flex;
+  padding-top: 15px;
+  align-items: flex-end;
+}
+
+.diabetes-login-t-rectangle-6ingat-saya {
+  display: flex;
+  justify-content: center;
+  column-gap: 11px;
+  align-items: center;
+}
+
+.diabetes-login-rectangle-6 {
+  flex-shrink: 0;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  height: 29px;
+  width: 29px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+}
+
+.diabetes-login-ingat-saya {
+  font-size: 20px;
+  color: rgba(74, 70, 70, 1);
+  font-weight: 500;
+}
+
+.diabetes-login-t-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 33px;
+}
+
+.diabetes-login-button {
+  display: flex;
+  filter: drop-shadow(4px 6px 1px rgba(0, 0, 0, 0.1));
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  justify-content: center;
+  padding-top: 21px;
+  padding-right: 52px;
+  padding-left: 52px;
+  padding-bottom: 21px;
+  background-color: rgba(32, 151, 145, 1);
+  align-items: center;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+}
+
+.diabetes-login-masuk {
+  text-align: center;
+  flex-grow: 1;
+  font-size: 37px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+}
+
+.diabetes-login-t-pengguna-baru-buat-akun {
+  padding-top: 9px;
+  padding-right: 116px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  display: flex;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.diabetes-login-pengguna-baru {
+  color: rgba(74, 70, 70, 1);
+}
+
+.diabetes-login-buat-akun {
+  color: rgba(32, 151, 145, 1);
+}
+
+.diabetes-login-text-7 {
+  color: rgba(74, 70, 70, 1);
+}
+
+.diabetes-login-tttt-group-6kretech-2024 {
+  display: flex;
+  justify-content: center;
+  padding-top: 157px;
+  padding-right: 186px;
+  padding-left: 186px;
+  align-items: flex-end;
+}
+
+.diabetes-login-tt-group-6kretech-2024 {
+  padding-right: 14px;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3.9px;
+  display: flex;
+}
+
+.diabetes-login-t-group-6 {
+  align-self: stretch;
+}
+
+.diabetes-login-group-6 {
+  height: 14px;
+  width: 9.1px;
+}
+
+.diabetes-login-kretech-2024 {
+  font-size: 15px;
+  color: rgba(32, 151, 145, 1);
+  font-weight: 500;
+}
+
+.diabetes-login-rectangle-7 {
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+  border-top-left-radius: 120px;
+  justify-content: flex-end;
+  padding-top: 93px;
+  padding-bottom: 93px;
+  align-self: stretch;
+  width: 695px;
+  flex-direction: column;
+  background-color: rgba(32, 151, 145, 1);
+  align-items: flex-end;
+}
+
+.diabetes-login-asasawd-1 {
+  flex-shrink: 0;
+  filter: drop-shadow(0px 4px 61px rgba(0, 0, 0, 0.25));
+  height: 471px;
+  width: 592px;
+  max-height: 100%;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 140% 100%;
+  background-image: url(/assets/asasawd-1.png);
+}
+
+.diabetes-login-deteksi-diabetes-sedini-mungkin-untuk-langkah-preventif {
+  flex-shrink: 0;
+  position: absolute;
+  top: 127px;
+  left: calc(50% + -112px + -143.5px);
+  height: 224px;
+  width: 419px;
+  font-size: 51px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 1.1;
+}
+
+.diabetes-login-text-10 {
+  font-weight: 500;
+}
+
+.diabetes-login-text-11 {
+  font-weight: 700;
+}
+
+.diabetes-login-text-12 {
+  font-weight: 500;
+}
+
+.diabetes-login-text-13 {
+  font-weight: 500;
+}
+
+.diabetes-login-text-14 {
+  font-weight: 700;
+}
+
+.diabetes-login-rectangle-4:focus-within {
+  box-shadow: 0 0 4px #1e40af;
+}
+
+.diabetes-login-rectangle-5:focus-within {
+  box-shadow: 0 0 4px #1e40af;
+}
+@media (min-width: 1430px) {
+  .diabetes-login-tttt-selamat-datang-tsilahkan-login-untuk-mendeteksi-diabetes-tusername-rectangle-4tpassword-rectangle-5ttrectangle-6ingat-saya-tbutton-ttpengguna-baru-buat-akun-ttttgroup-6kretech-2024rectangle-7 {
+    flex-wrap: nowrap;
+  }
+  .diabetes-login-t-pengguna-baru-buat-akun {
+    flex-wrap: nowrap;
+  }
+}
