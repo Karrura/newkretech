@@ -50,7 +50,6 @@ class reglogController extends Controller
             Session::put('password', $req->password);
             Session::put('login', 'true');
             Session::put('token', $res->token);
-
             return redirect('predict');
         }else{
             return redirect('/')->with('error', "Username or Password aren't in our list!");

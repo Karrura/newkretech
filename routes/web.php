@@ -32,7 +32,7 @@ Route::post('proses-login', [reglogController::class, 'prolog']);
 
 // MIDDLEWARE SUDAH LOGIN
 Route::group(['middleware' => 'sudahLogin'], function(){
-    Route::get('predict', [predictController::class, 'index']);
+    Route::get('predict', [predictController::class, 'index'])->middleware('add.token');
     Route::resource('profile', profilController::class);
     Route::get('logout', [reglogController::class, 'epilog']);
 

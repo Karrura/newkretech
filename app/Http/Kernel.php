@@ -69,5 +69,6 @@ class Kernel extends HttpKernel
         'sudahLogin' => \App\Http\Middleware\SudahLogin::class,
         'belumLogin' => \App\Http\Middleware\BelumLogin::class,
         'header' => \App\Http\Middleware\HandleHeader::class,
+        'add.token' => \App\Http\Middleware\AddTokenToHeaders::class,
     ];
 }
