@@ -36,7 +36,7 @@
                 </li>
                 <ion-icon name="ellipsis-vertical-outline" style="color: white; align-self: center; font-size: 20px"></ion-icon>
                 <li class="nav-item">
-                    <a href="{{url('profile')}}">
+                    <a href="{{url('profile')}}/{{session()->get('username')}}">
                         <img src="{{asset('old')}}/assets/profile-user.png" loading="lazy" style="flex-shrink: 0; height: 52px; width: 52px; object-position: center; object-fit: cover;"/>
                     </a>
                 </li>

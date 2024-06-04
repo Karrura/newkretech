@@ -14,19 +14,6 @@ class predictController extends Controller
         return view('predict.predict');
     }
 
-    // public static function getHttpHeaders(){
-
-    //     $bearerToken = session('token');
-    //     $headers    =   [
-    //          'headers' => [
-    //          'Content-Type' => 'application/json',
-    //            'Authorization' => 'Bearer ' .$bearerToken,
-    //          ],
-    //          'http_errors' => false,
-    //      ];
-    //      return $headers;
-    // }
-
     public function prosesPredict(Request $req){
         $token = Session::get('token');
         $apiUrl = "https://tugas-ppl-be-production.up.railway.app/api/prediction";
