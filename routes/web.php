@@ -36,7 +36,9 @@ Route::group(['middleware' => 'sudahLogin'], function(){
     Route::resource('profile', profilController::class);
     Route::get('logout', [reglogController::class, 'epilog']);
 
-    Route::group(['middleware' => 'header'], function(){
+    Route::group(['middleware' => 'add.token'], function(){
         Route::post('proses-predict', [predictController::class, 'prosesPredict']);
+        Route::post('proses-edit', [profilController::class, 'edit']);
+        Route::get('report/{username}', [predictController::class, 'report']);
     });
 });

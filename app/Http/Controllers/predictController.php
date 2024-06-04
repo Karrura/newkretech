@@ -22,7 +22,7 @@ class predictController extends Controller
             'Authorization' => $token,
             'Content-Type' => 'application/json',
         ])->post($apiUrl, [
-            'height'  => $req->tingg_badan,
+            'height'  => $req->tinggi_badan,
             'weight'  => $req->berat_badan,
             'age'     => $req->umur,
             'insulin' => $req->insulin,
@@ -30,13 +30,35 @@ class predictController extends Controller
         ]);
 
         $res = json_decode($response->getBody()->getContents());
-        dd($res);
-        if ($response->sucess()) {
-            // Handle successful response
-            dd($res);
+
+        if ($res->sucess) {
+            // return view('predict.predict', compact('res'));
+            return redirect('predict')->with('res', $res);
         } else {
-            // Handle error response
-            return redirect('/')->with('error', "Something went wrong!");
+            return redirect('predict')->with('error', "Something went wrong doing prediction!");
         }
     } 
+
+    public function report($username){
+        $token = Session::get('token');
+        $apiUrl = "https://tugas-ppl-be-production.up.railway.app/api/history/";
+        
+        $response = Http::withHeaders([
+            'Authorization' => $token,
+            'Content-Type' => 'application/json',
+        ])->get($apiUrl);
+
+        $res = json_decode($response->getBody()->getContents());
+        foreach ($res->data as $key => $value) {
+            $score[$key] = (float)$value->predictionNumber;
+        }
+        // $scorePrediction = json_encode($score);
+
+        if ($res->success) {
+            return view('predict.report', compact('res', 'score'));
+        } else {
+            return redirect('predict')->with('error', "Something went wrong accessing report!");
+        }
+        // return view('predict.report');
+    }
 }

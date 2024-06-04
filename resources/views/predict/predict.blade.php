@@ -10,17 +10,59 @@
             <div class="col-6" style="padding-right: 80px">
                 <div class="border border-1 rounded-5 border-success-subtle p-3" style="margin-top: 100px;">
                     <h1 style="font-family: Quicksand; color: rgba(32, 151, 145, 1); margin-top: -10%; margin-left: 30px; text-shadow: 2px 3px rgba(32, 151, 145, 0.486);"><strong>Prediksi Diabetes</strong></h1>
-                    @if(Session::has('success'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Nice!</strong> {{Session::get('success')}}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @elseif(Session::has('error'))
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <strong>Crap!</strong> {{Session::get('error')}}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
+                    @php
+                        if(Session::get('res')){
+                            $res = Session::get('res');
+                            if($res->sucess == 'true'){
+                    @endphp
+                            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                <div class="row">
+                                    <span><strong>Data</strong></span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"><label class="text-dark">Age</label></div>
+                                    <div class="col-2">{{$res->data->dataPrediksi->age}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"><label class="text-dark">Weigth</label></div>
+                                    <div class="col-2">{{$res->data->dataPrediksi->weight}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"><label class="text-dark">Height</label></div>
+                                    <div class="col-2">{{$res->data->dataPrediksi->height}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"><label class="text-dark">Insulin</label></div>
+                                    <div class="col-2">{{$res->data->dataPrediksi->insulin}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"><label class="text-dark">Glucose</label></div>
+                                    <div class="col-2">{{$res->data->dataPrediksi->glucose}}</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"><label class="text-dark">BMI</label></div>
+                                    <div class="col-2">{{$res->data->dataPrediksi->bmi}}</div>
+                                </div>
+                                <div class="row">
+                                    <strong>Prediction Score: {{$res->data->hasilPrediksi->score}}</strong>
+                                </div>
+                                <div class="row">
+                                    <strong>Result: {{$res->data->hasilPrediksi->prediction}}</strong>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                    @php
+                            }
+                        }else if(Session::get('error')){
+                    @endphp
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <div class="row">
+                                    <span><strong>{{Session::get('error')}}</strong></span>
+                                </div>
+                            </div>
+                    @php
+                        }
+                    @endphp
                     <form action="{{url('proses-predict')}}" method="post" enctype="multipart/form-data" class="pt-3" style="font-family: Quicksand; margin: 20px;">
                         @csrf
                         @method('POST')   

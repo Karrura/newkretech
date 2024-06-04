@@ -15,4 +15,8 @@ class profilController extends Controller
         // dd($username);
         return view('profil.profile');
     }
+
+    public function edit(Request $req){
+        dd($req);
+    }
 }
