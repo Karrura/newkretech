@@ -83,7 +83,87 @@
                     </h2>
                     <div id="accor{{$index}}" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="color: rgba(32, 151, 145, 1); font-family: Quicksand;"><strong>Riwayat Prediksi</strong></h3>
+                                    <span style="color: rgba(32, 151, 145, 1); font-family: Quicksand;"><strong>{{session()->get('fullName')}}</strong></span>
+                                    {{-- KOTAK HISTORY INFO --}}
+                                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                        <div class="row">
+                                            <span><strong>Data</strong></span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"><label class="text-dark">Age</label></div>
+                                            <div class="col-2">{{$d->age}}</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"><label class="text-dark">Weigth</label></div>
+                                            <div class="col-2">{{$d->weight}}</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"><label class="text-dark">Height</label></div>
+                                            <div class="col-2">{{$d->height}}</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"><label class="text-dark">Insulin</label></div>
+                                            <div class="col-2">{{$d->insulin}}</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"><label class="text-dark">Glucose</label></div>
+                                            <div class="col-2">{{$d->glucose}}</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2"><label class="text-dark">BMI</label></div>
+                                            <div class="col-2">{{$d->bmi}}</div>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Prediction Score: {{$d->predictionNumber}}</strong>
+                                        </div>
+                                        <div class="row">
+                                            <strong>Result: {{$d->predictionMessage}}</strong>
+                                        </div>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3 style="color: rgba(32, 151, 145, 1); font-family: Quicksand;"><strong>Saran</strong></h3>
+                                    <br>
+                                    {{-- KOTAK SARAN --}}
+                                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                        <div class="row">
+                                            <span><strong>Berdasarkan input kadar gula darah puasa: </strong>
+                                                @php
+                                                    if($d->glucose < 70){
+                                                        echo 'Gejala akut seperti pusing, lemas, keringat dingin, kebingungan, dan bisa menyebabkan kejang atau kehilangan kesadaran jika sangat rendah. Konsumsi makanan atau minuman yang mengandung gula segera jika gejala muncul. Monitor kadar gula darah secara teratur, terutama bagi penderita diabetes yang menggunakan insulin atau obat lain.';
+                                                    }else if($d->glucose < 100){
+                                                        echo 'Pertahankan pola makan seimbang yang kaya serat, buah-buahan, sayuran, dan protein tanpa lemak.Lakukan olahraga secara teratur.Pertahankan berat badan ideal.Hindari stres berlebihan.';
+                                                    }else if($d->glucose < 126){
+                                                        echo 'Adopsi pola makan sehat yang rendah karbohidrat sederhana dan gula. Tingkatkan aktivitas fisik. Monitor kadar gula darah secara teratur. Pertahankan berat badan yang sehat.';
+                                                    }else{
+                                                        echo 'Risiko komplikasi jangka panjang seperti penyakit jantung, kerusakan ginjal, kerusakan saraf, dan masalah penglihatan. Ketoasidosis diabetik pada diabetes tipe 1. Ikuti perawatan medis yang diresepkan, termasuk penggunaan obat atau insulin. Monitor kadar gula darah secara teratur.Adopsi pola makan yang direkomendasikan oleh ahli gizi.Lakukan olahraga secara teratur.Pertahankan berat badan yang sehat.';
+                                                    }
+                                                @endphp
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <span><strong>Berdasarkan tingkat BMI: </strong>
+                                                @php
+                                                if($d->bmi < 19){
+                                                    echo 'Risiko kekurangan gizi. Osteoporosis. Sistem kekebalan tubuh yang lemah. Anemia. Konsumsi makanan yang kaya nutrisi dan kalori. Sertakan protein, karbohidrat kompleks, dan lemak sehat dalam diet. Konsultasikan dengan ahli gizi untuk rencana makan yang tepat. Lakukan latihan kekuatan untuk membangun massa otot.';
+                                                }else if($d->bmi < 25){
+                                                    echo 'Pertahankan pola makan seimbang yang kaya serat, buah-buahan, sayuran, dan protein tanpa lemak. Lakukan olahraga secara teratur. Monitor berat badan secara berkala. Hindari kebiasaan tidak sehat seperti mer';
+                                                }else if($d->bmi < 30){
+                                                    echo 'Peningkatan risiko penyakit jantung, tekanan darah tinggi, diabetes tipe 2, dan beberapa jenis kanker. Adopsi pola makan sehat yang rendah karbohidrat sederhana dan lemak jenuh. Tingkatkan aktivitas fisik, seperti berolahraga minimal 150 menit per minggu. Monitor berat badan secara berkala.Pertahankan gaya hidup aktif dan hindari duduk terlalu lama.';
+                                                }else{
+                                                    echo 'Risiko tinggi penyakit jantung, diabetes tipe 2, tekanan darah tinggi, penyakit hati, dan masalah sendi. Konsultasikan dengan dokter atau ahli gizi untuk rencana penurunan berat badan yang aman. Ikuti program penurunan berat badan yang mencakup diet seimbang dan aktivitas fisik teratur. Monitor berat badan dan kesehatan secara rutin.Pertimbangkan intervensi medis jika diperlukan.';
+                                                }
+                                                @endphp
+                                            </span>
+                                        </div>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     </div>
