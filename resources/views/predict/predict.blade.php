@@ -84,7 +84,7 @@
                         </div>
                     </form>
                     <div class="card-body pt-2 pb-2 text-center">
-                        <h5><a href="{{url('report')}}/{{session('username')}}" style="color: rgba(32, 151, 145, 1); font-family: Quicksand;"><strong>Lihat riwayat prediksi</strong></a></h5>
+                        <h5><a href="{{url('report')}}/" style="color: rgba(32, 151, 145, 1); font-family: Quicksand;"><strong>Lihat riwayat prediksi</strong></a></h5>
                     </div>
                 </div>
             </div>

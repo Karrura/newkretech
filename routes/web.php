@@ -29,6 +29,9 @@ Route::get('/', function () {
 // Route::get('login', [reglogController::class, 'login']);
 Route::post('proses-regist', [reglogController::Class, 'proreg']);
 Route::post('proses-login', [reglogController::class, 'prolog']);
+Route::get('aboutus', function(){
+    return view('template.aboutus');
+});
 
 // MIDDLEWARE SUDAH LOGIN
 Route::group(['middleware' => 'sudahLogin'], function(){
@@ -39,6 +42,6 @@ Route::group(['middleware' => 'sudahLogin'], function(){
     Route::group(['middleware' => 'add.token'], function(){
         Route::post('proses-predict', [predictController::class, 'prosesPredict']);
         Route::post('proses-edit', [profilController::class, 'edit']);
-        Route::get('report/{username}', [predictController::class, 'report']);
+        Route::get('report', [predictController::class, 'report']);
     });
 });

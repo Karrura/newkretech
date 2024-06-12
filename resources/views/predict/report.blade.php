@@ -59,6 +59,36 @@
                 <a href="{{url('predict')}}">
                     <ion-icon name="arrow-back-outline" style="color: rgba(32, 151, 145, 1); font-size: 35px"></ion-icon>
                 </a>
+                
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Fillter End Date and Start Date</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{url('report')}}" method="get" enctype="multipart/form-data">
+                                @csrf
+                                @method('GET')
+                                <div class="row">
+                                    <div class="col form-group text-left">
+                                        <label class="control-label" style="margin-bottom: 7px">From</label>
+                                        <input type="date" class="form-control form-control-lg input-secondary shadow-sm" name="startdate" required>
+                                    </div>
+                                    <div class="col form-group text-left">
+                                        <label class="control-label" style="margin-bottom: 7px">To</label>
+                                        <input type="date" class="form-control form-control-lg input-secondary shadow-sm" name="enddate" required>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button type="submit" class="btn" style="background-color: rgba(32, 151, 145, 1); color: white;"><strong>Search</strong></button>
+                                </div>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                </div>                                  
                 <figure class="highcharts-figure">
                     <div id="container"></div>
                     <p class="highcharts-description">
@@ -66,6 +96,7 @@
                     </p>
                 </figure>
             </div>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgba(32, 151, 145, 1); color: white;">Fillter</button>
         </div>
         <div class="row P-2">
             <div class="accordion" id="accordionExample">
@@ -151,7 +182,7 @@
                                                 if($d->bmi < 19){
                                                     echo 'Risiko kekurangan gizi. Osteoporosis. Sistem kekebalan tubuh yang lemah. Anemia. Konsumsi makanan yang kaya nutrisi dan kalori. Sertakan protein, karbohidrat kompleks, dan lemak sehat dalam diet. Konsultasikan dengan ahli gizi untuk rencana makan yang tepat. Lakukan latihan kekuatan untuk membangun massa otot.';
                                                 }else if($d->bmi < 25){
-                                                    echo 'Pertahankan pola makan seimbang yang kaya serat, buah-buahan, sayuran, dan protein tanpa lemak. Lakukan olahraga secara teratur. Monitor berat badan secara berkala. Hindari kebiasaan tidak sehat seperti mer';
+                                                    echo 'Pertahankan pola makan seimbang yang kaya serat, buah-buahan, sayuran, dan protein tanpa lemak. Lakukan olahraga secara teratur. Monitor berat badan secara berkala. Hindari kebiasaan tidak sehat seperti merokok dan konsumsi alkohol berlebihan.';
                                                 }else if($d->bmi < 30){
                                                     echo 'Peningkatan risiko penyakit jantung, tekanan darah tinggi, diabetes tipe 2, dan beberapa jenis kanker. Adopsi pola makan sehat yang rendah karbohidrat sederhana dan lemak jenuh. Tingkatkan aktivitas fisik, seperti berolahraga minimal 150 menit per minggu. Monitor berat badan secara berkala.Pertahankan gaya hidup aktif dan hindari duduk terlalu lama.';
                                                 }else{
@@ -175,6 +206,7 @@
 <script>
     $(document).ready(function(){
         var predict = <?php echo json_encode($score) ?>;
+        var periode = <?php echo json_encode($periode) ?>;
         Highcharts.chart('container', {
             title: {
                 text: '<span style="font-family: Quicksand; color: rgba(32, 151, 145, 1); font-size: 30px"><strong>Riwayat Prediksi</strong></span>',
@@ -193,10 +225,10 @@
                 min: 0
             },
             xAxis: {
+                categories: periode,
                 title: {
                     text: '<span style="font-family: Quicksand; color: rgba(32, 151, 145, 1); font-size: 15px">Prediction Time</span>'
-                },
-                min: 1
+                }
             },
             legend: {
                 layout: 'horizontal',

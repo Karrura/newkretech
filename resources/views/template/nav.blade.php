@@ -24,11 +24,11 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 </head>
-<body>
+<body style="min-height: 100vh; margin: 0; display: grid; grid-template-rows: auto 1fr auto;">
     <nav class="navbar" style="background-color: rgba(32, 151, 145, 1); border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;">
         <div class="container">
-            <object data="{{asset('old')}}/assets/Group6.svg" alt="Kretech" style="height: 60px; width: auto; margin-bottom: -1px; stroke-width: 0"></object>
+            <a href="{{url('aboutus')}}"><img src="{{asset('old')}}/assets/Group6.svg" alt="Kretech" style="height: 60px; width: auto; margin-bottom: -1px; stroke-width: 0"></img></a>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
                     <a href="{{url('predict')}}">
@@ -37,7 +37,7 @@
                 </li>
                 <ion-icon name="ellipsis-vertical-outline" style="color: white; align-self: center; font-size: 20px"></ion-icon>
                 <li class="nav-item">
-                    <a href="{{url('report')}}/{{session()->get('username')}}">
+                    <a href="{{url('report')}}">
                         <img src="{{asset('old')}}/assets/google-docs.png" loading="lazy" style="flex-shrink: 0; height: 52px; width: 52px; object-position: center; object-fit: cover; align-self: center;"/>
                     </a>
                 </li>
@@ -67,10 +67,14 @@
     <div class="" style="display: flex; justify-content: center; padding-left: 1px; margin-bottom: 50px; margin-top: 50px">
         <div class="" style="display: flex; justify-content: center; column-gap: 3.9px; align-items: center;">
             <div class="" style="align-self: stretch;">
-                <object data="{{asset('old')}}/assets/Group7.svg" class="" style="height: 14px; width: 9.1px;"
-                ></object>
+                <a href="{{url('aboutus')}}" style="text-decoration:none; color: rgba(32, 151, 145, 1);"><img src="{{asset('old')}}/assets/Group7.svg" class="" style="height: 14px; width: 9.1px;"
+                ></img></a>
             </div>
-            <footer class="" style="font-size: 15px; color: rgba(32, 151, 145, 1);">Kretech©2024</footer>
+            <footer class="" style="font-size: 15px; margin-top: auto;">
+                <a href="{{url('aboutus')}}" style="text-decoration:none; color: rgba(32, 151, 145, 1);">
+                    Kretech©2024
+                </a>
+            </footer>
         </div>
     </div>
 
